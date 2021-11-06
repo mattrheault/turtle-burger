@@ -1,0 +1,108 @@
+$white: #F7F9FD
+$light: #DDEBF7
+
+body
+  background: #ffffff
+  min-height: 100%
+  overflow-x: hidden
+  margin: 0
+  padding: 0
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+code
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+
+.box
+  border: 1px solid #dcdcdc
+  padding: 18px
+  border-radius: 4px
+
+.container
+  max-width: 600px
+  &.centered
+    margin-left: auto
+    margin-right: auto
+
+.logo-link
+  text-decoration: none
+  transition: color 0.5s ease
+  &:hover
+    color: rgb(98,0,238)
+  &:active
+    color: rgb(66, 90, 112)
+
+.annotation-header
+  min-height: 90px
+  background: rgb(98,0,238)
+  background: linear-gradient(180deg, rgb(98,0,238) 0%, rgb(127,57,251) 100%)
+  .pagination-buttons button
+    background-color: none
+    transition: background-color 0.5s ease
+    &:hover, &:active, &:focus
+      color: #fff
+      background-color: rgb(98,0,238) !important
+      box-shadow: inset 0 0 10px rgb(98,35,189)
+  *
+    text-shadow: 3px 1px rgb(98,0,238)
+    color: $white
+  svg
+    fill: $white !important
+    &.accent-icon
+      fill: #7f39fb !important
+
+.highlighted-text
+  background: rgba(255,241,118, 0.6)
+  padding: 8px 12px
+  *
+    font-family: "Times New Roman", Times, serif
+    letter-spacing: 0.2px
+
+.annotation-view
+  padding: 16px
+
+.author-row
+  background: $white
+  border: 1px solid $light
+  margin: 10px 0
+  padding: 10px
+  transition: background-color 0.5s ease
+  .author-row-inner-button
+    &:hover
+      background: none !important
+  &:hover
+    cursor: pointer
+    background-color: #f1fbfc
+    border: 1px solid #d2eef3
+
+.comment
+  white-space: pre-wrap
+
+.animate-bounce-in
+  align-self: flex-end
+  animation-duration: 1s
+  animation-iteration-count: 1
+  margin: 0 auto
+  transform-origin: bottom
+  animation-name: bounce-in
+  animation-timing-function: ease
+
+@keyframes bounce-in
+  0%
+    opacity: 0.1
+    transform: scale(1,1) translateX(0)
+  10%
+    opacity: 0.5
+    transform: scale(1.1,.9) translateX(0)
+  30%
+    opacity: 1
+    transform: scale(.9,1.1) translateX(22px)
+  50%
+    transform: scale(1,1) translateX(0);
+  57%
+    transform: scale(1,1) translateX(-4px)
+  64%
+    transform: scale(1,1) translateX(0)
+  100%
+    transform: scale(1,1) translateX(0)
